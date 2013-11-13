@@ -13,10 +13,10 @@ MCU = cortex-m4
 
 MCFLAGS = -mcpu=$(MCU) -mthumb -mlittle-endian -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb-interwork -fsingle-precision-constant
 
-INCLUDES = -I../../../Libraries/CMSIS/Device/ST/STM32F4xx/Include \
-	   -I../../../Libraries/CMSIS/Include \
-	   -I../../../Libraries/CMSIS/RTOS \
-	   -I../../../Libraries/STM32F4xx_StdPeriph_Driver/inc \
+INCLUDES = -I../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/CMSIS/Device/ST/STM32F4xx/Include \
+	   -I../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/CMSIS/Include \
+	   -I../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/CMSIS/RTOS \
+	   -I../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/STM32F4xx_StdPeriph_Driver/inc \
 	   -I.
 
 OPTIMIZE = -Os
@@ -34,11 +34,11 @@ SOURCE = Video.c \
 	 main.c \
 	 system_stm32f4xx.c \
 	 interrupt.c \
-	 ../../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c \
-	 ../../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c \
-	 ../../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c \
-	 ../../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c \
-	 ../../../Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
+	 ../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c \
+	 ../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c \
+	 ../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c \
+	 ../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c \
+	 ../STM32F4xx_DSP_StdPeriph_Lib_V1.2.0/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
 
 $(TARGET) : $(EXECUTABLE) 
 	
