@@ -10,6 +10,7 @@
 
 //Vars
 
+static jmp_buf env_main;
 static jmp_buf env_start;
 static jmp_buf env_ret;
 
@@ -343,8 +344,9 @@ void EXTI15_10_IRQHandler(void){
 
 	RESUME; // Resume  do_magic();
 
+	
 	EXTI_ClearITPendingBit(EXTI_Line15);
-
+	longjmp(env_main,0); // return to main
 	return;
 
 }

@@ -42,7 +42,8 @@ int main(){
 	if(Global_Video_Buffer) set_led( 0 );
 
 	init_EXINT();
-
+	
+	setjmp(env_main);
 	while(1);
 
 	return 0;
